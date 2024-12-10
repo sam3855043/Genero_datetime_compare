@@ -1,9 +1,13 @@
+# Schema and main logic for handling datetime operations
+# Author: samuel-chuang
+# Email: sam3855043@gmail.com
+# This 4gl is an example assignment for time comparison.
+# using DIGIWIN SCHEMA TO TEST
 SCHEMA ds
 MAIN
 
    DEFINE ls_gzpg004   LIKE gzpg_t.gzpg004
    DEFINE ls_gzpg005   LIKE gzpg_t.gzpg005
-#  DEFINE ld_now       LIKE gzpf_t.gzpf002
    DEFINE ls_gzpg004_2 DATETIME HOUR TO SECOND
    DEFINE ls_gzpg005_2 DATETIME HOUR TO SECOND
    DEFINE ld_now       DATETIME YEAR TO SECOND
@@ -40,15 +44,15 @@ MAIN
 
    LET ls_str = ls_date," ",ls_gzpg005
    #LET dt1 = ls_str
-LET dt2 = ls_str
+   LET dt2 = ls_str
    DISPLAY "dt2:",dt2
    DISPLAY "ls_str:",ls_str
 
-#IF ld_now >= dt1 AND ld_now < dt2 THEN
-#IF ld_now < dt2 THEN
-IF ld_now > dt1 THEN
-    DISPLAY "dt1 is earlier than dt2."
-ELSE
-    DISPLAY "dt1 is not earlier than dt2."
-END IF
+   #IF ld_now >= dt1 AND ld_now < dt2 THEN
+   #IF ld_now < dt2 THEN
+   IF ld_now > dt1 THEN
+      DISPLAY "dt1 is earlier than dt2."
+   ELSE
+      DISPLAY "dt1 is not earlier than dt2."
+   END IF
 END MAIN
