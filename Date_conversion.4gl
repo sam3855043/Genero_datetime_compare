@@ -1,0 +1,8 @@
+MAIN
+    DEFINE a DATE  
+    DEFINE b STRING
+    LET b='2024/12/16 11:35:24'
+    DISPLAY b
+    LET a = b
+    DISPLAY a
+ END MAIN
